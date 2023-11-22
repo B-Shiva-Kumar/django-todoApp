@@ -72,7 +72,7 @@ CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 *good to know*
 
 http://127.0.0.1:8000/ # local host
-http://0.0.0.0:8000/ # Server host to access anywhere (OR use server IP)
+http://0.0.0.0:8000/   # Server host to access anywhere (OR use server IP)
 ```
 ---
 
