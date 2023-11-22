@@ -102,6 +102,27 @@ lsof -i:8000                            # :<use any port>
 kill -9 <process-id>                    # -9 is process
 ```
 
+---
+
+# Jenkins CICD pipeline implementation:
+
+---
+### Jenkins and GitHub integration:
+
+* *install `git client` plugin*
+    - *PATH -> manage jenkins -> plugins -> available plugins*
+* *Add github credentials (username and PAT)* 
+    - *PATH -> manage jenkins -> system -> Add `[Github Server AND name AND none AND Add Jenkins]`*
+        - *select `kind` field as `secret text` -> Add Github's PAT to `secret` field + Add ID as `jenkins-github-cicd`*
+* *`test connection` will verify the github credentials are valid or not*
+---
+* *Create a job with `freestyle` project*
+    - *`git scm` -> add git repo*
+    - *add `executable shell` commands*
+        ```
+        sudo docker build . -t todoappdev
+        sudo docker run -d -p 8000:8000 todoappdev
+        ```    
 
 ## Jenkins Docker-image:
 
