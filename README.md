@@ -118,11 +118,18 @@ kill -9 <process-id>                    # -9 is process
 ---
 * *Create a job with `freestyle` project*
     - *`git scm` -> add git repo*
-    - *add `executable shell` commands*
+    - *add `executable shell` commands if `dockerfile`*
         ```
+        # use for Dockerfile without docker-compose
+
         sudo docker build . -t todoappdev
         sudo docker run -d -p 8000:8000 todoappdev
         ```    
+    - *add `executable shell` commands if `docker-compose`*
+        ```
+        sudo docker-compose down
+        sudo docker-compose up -d --force-recreate --no-deps --build web    # web service
+        ```
 
 ## Jenkins Docker-image:
 
