@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: todoapp-svc
+spec:
+  selector:
+    app: todoapp
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 80          # access this port outside/web portal
+      targetPort: 8000  # targetPort is a ccontainerPort
+      nodePort: 30003   # NodePort range b/w 30000 to 32000
