@@ -1,6 +1,7 @@
 version : '3'
 services :
   web :
-    build : .
+    # build : .
+    image : 72278338/todoapp:latest
     ports : 
     - "8000:8000"
