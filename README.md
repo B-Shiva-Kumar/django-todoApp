@@ -164,6 +164,11 @@ jenkins ALL = NOPASSWD: ALL
 
 ```
 ---
+## Jenkins CICD pipeline implementation using Groovy script:
+
+* *Source updated with `Jenkinsfile` which contains `CICD pipeline` implemenation using groovy syntax, only need to specify/add docekrhub credentials and Path to Jenkins file using SCM and branch pspecifier.*
+
+---
 
 
 ### *ref:*
